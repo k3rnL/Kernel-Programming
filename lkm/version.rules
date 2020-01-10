@@ -1,0 +1,1 @@
+KERNEL=="version", SYMLINK+="version", MODE="0444"
