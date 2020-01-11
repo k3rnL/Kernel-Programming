@@ -19,7 +19,6 @@
 #include <linux/utsname.h>
 #include <linux/version.h>
 
-
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Erwan Daniel <daniel.erwan31@gmail.com>");
 MODULE_DESCRIPTION("Epitech project");
@@ -27,6 +26,7 @@ MODULE_VERSION("1");
 
 struct version_string_holder {
   int  size;
+  int  null_byte_pos;
   char *string;
 };
 
@@ -37,10 +37,10 @@ static ssize_t version_read(struct file * file, char * buf,
 {
   int to_copy;
 
-  if (*ppos >= version_string.size)
+  if (*ppos >= version_string.null_byte_pos)
     return 0;
     
-  to_copy = version_string.size - *ppos;
+  to_copy = version_string.null_byte_pos - *ppos;
   if (count < to_copy)
     to_copy = count;
     
@@ -50,9 +50,33 @@ static ssize_t version_read(struct file * file, char * buf,
   return to_copy;
 }
 
+static ssize_t version_write(struct file * file, const char * buf,
+ size_t count, loff_t *ppos)
+{
+  int to_copy ;
+
+  // No memory left
+  if (*ppos >= version_string.size - 1) {
+    return ENOSPC;
+  }
+
+  to_copy = version_string.size - 1 - *ppos;
+  if (count < to_copy)
+    to_copy = count;
+  printk("try to copy %d bytes at %d position, user asked %d bytes\n", to_copy, *ppos, count);
+  memcpy(&version_string.string[*ppos], buf, to_copy);
+  *ppos += to_copy;
+  
+  version_string.string[*ppos] = '\0';
+  version_string.null_byte_pos = *ppos;
+  
+  return to_copy;
+}
+
 static const struct file_operations version_fops = {
  .owner = THIS_MODULE,
  .read = version_read,
+ .write = version_write
 };
 
 static struct miscdevice version_dev = {
@@ -72,6 +96,8 @@ static int __init version_init(void)
   
   version_string.string[version_string.size - 2] = '\n';
   version_string.string[version_string.size - 1] = '\0';
+
+  version_string.null_byte_pos = version_string.size - 1;  
 
   ret = misc_register(&version_dev);
   if (ret)

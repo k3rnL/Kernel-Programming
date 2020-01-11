@@ -1,1 +1,1 @@
-KERNEL=="version", SYMLINK+="version", MODE="0444"
+KERNEL=="version", SYMLINK+="version", MODE="0666"

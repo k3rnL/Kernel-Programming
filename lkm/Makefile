@@ -1,6 +1,12 @@
 obj-m += version.o
 
-all:
+all: module test
+	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
+
+test: test.o
+	gcc -o test test.o
+
+module:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
 
 install:
