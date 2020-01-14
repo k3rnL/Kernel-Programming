@@ -1,0 +1,7 @@
+
+%macro test 1
+       %1:
+	ret
+%endmacro
+
+	
