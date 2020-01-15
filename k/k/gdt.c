@@ -2,7 +2,7 @@
 #include "gdt.h"
 
 
-static struct gdtdesc gdt[6] = {0};
+static struct gdtdesc gdt[3] = {0};
 
 void init_gdt_desc(u32 base, u32 limit, u32 dpl, u32 type, u32 nb)
 {

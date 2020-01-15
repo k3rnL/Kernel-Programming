@@ -54,6 +54,9 @@ idt_load:
 
 global isr_oui
 isr_oui:
+   cli
+   push 0
+
    pusha                    ; Pushes edi,esi,ebp,esp,ebx,edx,ecx,eax
 
    mov ax, ds               ; Lower 16-bits of eax = ds.

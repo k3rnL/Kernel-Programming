@@ -151,7 +151,7 @@ void init_idt()
 {
   printf("VOILA\n");
   /* Initialisation des descripteurs systeme par defaut */
-  for (unsigned int i = 0; i < IDTSIZE; i++) 
+  for (unsigned int i = 0; i < IDTSIZE; i++)
     init_idt_desc(0x08, (u32) isr_oui, INTGATE, i);
   
   //init_idt_desc(0x08, (u32) _asm_irq_0, INTGATE, 33);
@@ -414,11 +414,11 @@ init_idt_desc(0x08, (u32) interrupt_254, INTGATE, 254);
 
   
 /* Initialisation de la structure pour IDTR */
-  idtr.limite = 255 - 1;
-  idtr.base = (u32)idt;
+  idtr.limite = sizeof(struct idtdesc) * 255;
+  idtr.base = (u32) idt;
   
  
-  memcpy((char *) idtr.base, (char *) idt, idtr.limite);
+  //memcpy((char *) idtr.base, (char *) idt, idtr.limite);
   
   //  idt_load();
 
