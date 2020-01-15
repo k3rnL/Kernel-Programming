@@ -76,9 +76,15 @@ void generic_c_handler(void)
   //      SYSCALL
 }
 
-void isr_default_int(void)
+void isr_default_int(registers_t regs)
+//        void isr_default_int(registers_t regs)
 {
 	printf("interrupt\n");
+	//printf("interrupt %d err %d\n", regs.int_no, regs.err_code);
+}
+
+void isr_gfp() {
+    printf("interrupt 13 : GFP\n");
 }
 
 void isr_clock_int(void)
@@ -152,8 +158,14 @@ void init_idt()
   printf("VOILA\n");
   /* Initialisation des descripteurs systeme par defaut */
   for (unsigned int i = 0; i < IDTSIZE; i++)
-    init_idt_desc(0x08, (u32) isr_oui, INTGATE, i);
-  
+    init_idt_desc(0x08, (u32) interrupt_0, INTGATE, i);
+
+    init_idt_desc(0x08, (u32) interrupt_8, INTGATE, 8);
+    init_idt_desc(0x08, (u32) interrupt_10, INTGATE, 10);
+    init_idt_desc(0x08, (u32) interrupt_11, INTGATE, 11);
+    init_idt_desc(0x08, (u32) interrupt_12, INTGATE, 12);
+    init_idt_desc(0x08, (u32) interrupt_13, INTGATE, 13);
+    init_idt_desc(0x08, (u32) interrupt_14, INTGATE, 14);
   //init_idt_desc(0x08, (u32) _asm_irq_0, INTGATE, 33);
   /*
 init_idt_desc(0x08, (u32) interrupt_1, INTGATE, 1);
