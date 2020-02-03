@@ -1,12 +1,10 @@
-#include <timer.h>
 #include <isr.h>
-#include <fb.h>
-#include <stddef.h>
+#include <stdio.h>
 
 #define KEYBOARD_DATA_PORT    0x60
 #define KEYBOARD_STATUS_PORT  0x64
 
-static const uint8_t keyboard_map[] =
+static const u8 keyboard_map[] =
 {
     0,
    27, // Escape
@@ -22,7 +20,7 @@ static const uint8_t keyboard_map[] =
   ' ', // Spacebar
 };
 
-static const uint8_t shifted_keyboard_map[] =
+static const u8 shifted_keyboard_map[] =
 {
     0,
    27, // Escape
@@ -38,12 +36,12 @@ static const uint8_t shifted_keyboard_map[] =
   ' ', // Spacebar
 };
 
-static volatile uint8_t shift_pressed = 0;
+static volatile u8 shift_pressed = 0;
 
 static void keyboard_callback(/*registers_t regs*/)
 {
     if (inb(KEYBOARD_STATUS_PORT) & 0x01) {
-        uint8_t keycode = inb(KEYBOARD_DATA_PORT);
+        u8 keycode = inb(KEYBOARD_DATA_PORT);
         // Switch to shifted keyboard map when shift is pressed
         if (shift_pressed == 0 && (keycode == 42 || keycode == 54)) {
             shift_pressed = keycode;
@@ -55,7 +53,8 @@ static void keyboard_callback(/*registers_t regs*/)
         if (keycode > sizeof(keyboard_map)) {
             return;
         }
-        shift_pressed > 0 ? fb_put(shifted_keyboard_map[keycode]) : fb_put(keyboard_map[keycode]);
+        char c = shift_pressed > 0 ? shifted_keyboard_map[keycode] : keyboard_map[keycode];
+        printf("%c", c);
     }
 }
 

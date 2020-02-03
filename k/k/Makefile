@@ -35,6 +35,7 @@ OBJS	= 	crt0.o \
 		kernel/isr.o \
 		kernel/interruption.o \
 		kernel/descriptor_tables.o \
+		kernel/keyboard.o \
 
 
 DEPS = $(OBJS:.o=.d)

@@ -27,6 +27,7 @@
 #include "io.h"
 #include "multiboot.h"
 #include "descriptor_tables.h"
+#include "keyboard.h"
 
 void k_main(unsigned long magic, multiboot_info_t *info)
 {
@@ -40,9 +41,11 @@ void k_main(unsigned long magic, multiboot_info_t *info)
 
     init_descriptor_tables();
 
+    init_keyboard();
+
     __asm__("sti");
 
-    while(1);
+//    while(1);
 }
 
 
