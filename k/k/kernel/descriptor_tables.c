@@ -2,6 +2,7 @@
 // Created by k3rnL on 2/3/2020.
 //
 
+#include "io.h"
 #include "descriptor_tables.h"
 
 void init_pic(void)

@@ -25,14 +25,15 @@ include ../config.mk
 
 TARGET	= 	k
 OBJS	= 	crt0.o \
-		kernel/k.o \
+		k.o \
 		libvga.o \
 		list.o \
 		memory.o \
 		serial.o \
 		kernel/gdt.o \
 		kernel/idt.o \
-		kernel/idt_load.o
+		kernel/idt_load.o \
+		kernel/descriptor_tables.o \
 
 
 DEPS = $(OBJS:.o=.d)
@@ -40,7 +41,7 @@ DEPS = $(OBJS:.o=.d)
 all: $(TARGET)
 
 $(TARGET): CPPFLAGS += -MMD -Iinclude -I ../libs/libc/include/
-$(TARGET): CFLAGS += $(K_EXTRA_CFLAGS)
+$(TARGET): CFLAGS += $(K_EXTRA_CFLAGS) -Iinclude
 $(TARGET): LDFLAGS += -Wl,-Tk.lds
 $(TARGET): LDLIBS = -L../libs/libc -lc
 $(TARGET): $(OBJS)
