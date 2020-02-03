@@ -1,8 +1,9 @@
 [
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/libs/libc",
+  "directory": "e://Programmation/Kernel-Programming/k/libs/libc",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -30,9 +31,10 @@
   "file": "memchr.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/libs/libc",
+  "directory": "e://Programmation/Kernel-Programming/k/libs/libc",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -60,9 +62,10 @@
   "file": "memcmp.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/libs/libc",
+  "directory": "e://Programmation/Kernel-Programming/k/libs/libc",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -90,9 +93,10 @@
   "file": "memcpy.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/libs/libc",
+  "directory": "e://Programmation/Kernel-Programming/k/libs/libc",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -120,9 +124,10 @@
   "file": "memmove.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/libs/libc",
+  "directory": "e://Programmation/Kernel-Programming/k/libs/libc",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -150,9 +155,10 @@
   "file": "memset.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/libs/libc",
+  "directory": "e://Programmation/Kernel-Programming/k/libs/libc",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -180,9 +186,10 @@
   "file": "printf.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/libs/libc",
+  "directory": "e://Programmation/Kernel-Programming/k/libs/libc",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -210,9 +217,10 @@
   "file": "puts.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/libs/libc",
+  "directory": "e://Programmation/Kernel-Programming/k/libs/libc",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -240,9 +248,10 @@
   "file": "strcasecmp.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/libs/libc",
+  "directory": "e://Programmation/Kernel-Programming/k/libs/libc",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -270,9 +279,10 @@
   "file": "strcat.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/libs/libc",
+  "directory": "e://Programmation/Kernel-Programming/k/libs/libc",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -300,9 +310,10 @@
   "file": "strcmp.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/libs/libc",
+  "directory": "e://Programmation/Kernel-Programming/k/libs/libc",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -330,9 +341,10 @@
   "file": "strcpy.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/libs/libc",
+  "directory": "e://Programmation/Kernel-Programming/k/libs/libc",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -360,9 +372,10 @@
   "file": "strlen.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/libs/libc",
+  "directory": "e://Programmation/Kernel-Programming/k/libs/libc",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -390,9 +403,10 @@
   "file": "strncasecmp.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/libs/libc",
+  "directory": "e://Programmation/Kernel-Programming/k/libs/libc",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -420,9 +434,10 @@
   "file": "strncmp.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/libs/libc",
+  "directory": "e://Programmation/Kernel-Programming/k/libs/libc",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -450,9 +465,10 @@
   "file": "strncpy.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/libs/libc",
+  "directory": "e://Programmation/Kernel-Programming/k/libs/libc",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -480,9 +496,10 @@
   "file": "strnlen.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/libs/libk",
+  "directory": "e://Programmation/Kernel-Programming/k/libs/libk",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -511,9 +528,10 @@
   "file": "graphic.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/libs/libk",
+  "directory": "e://Programmation/Kernel-Programming/k/libs/libk",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -544,9 +562,10 @@
   "file": "malloc.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/libs/libk",
+  "directory": "e://Programmation/Kernel-Programming/k/libs/libk",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -575,9 +594,10 @@
   "file": "sound.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/libs/libk",
+  "directory": "e://Programmation/Kernel-Programming/k/libs/libk",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -606,9 +626,10 @@
   "file": "strdup.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/libs/libk",
+  "directory": "e://Programmation/Kernel-Programming/k/libs/libk",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -637,38 +658,7 @@
   "file": "syscalls.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/k",
-  "arguments": [
-   "cc",
-   "-std=gnu99",
-   "-Os",
-   "-Wall",
-   "-Wextra",
-   "-nostdinc",
-   "-fno-builtin",
-   "-ffreestanding",
-   "-m32",
-   "-fno-asynchronous-unwind-tables",
-   "-fno-common",
-   "-fno-pie",
-   "-march=i486",
-   "-fno-stack-protector",
-   "-ffunction-sections",
-   "-fdata-sections",
-   "-I/usr/lib/gcc/x86_64-linux-gnu/5/include",
-   "-MMD",
-   "-Iinclude",
-   "-I",
-   "../libs/libc/include/",
-   "-c",
-   "-o",
-   "k.o",
-   "k.c"
-  ],
-  "file": "k.c"
- },
- {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/k",
+  "directory": "e://Programmation/Kernel-Programming/k/k",
   "arguments": [
    "cc",
    "-m32",
@@ -685,9 +675,10 @@
   "file": "crt0.S"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/k",
+  "directory": "e://Programmation/Kernel-Programming/k/k",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -716,9 +707,10 @@
   "file": "libvga.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/k",
+  "directory": "e://Programmation/Kernel-Programming/k/k",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -747,9 +739,10 @@
   "file": "list.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/k",
+  "directory": "e://Programmation/Kernel-Programming/k/k",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -778,9 +771,10 @@
   "file": "memory.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/k",
+  "directory": "e://Programmation/Kernel-Programming/k/k",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -809,71 +803,10 @@
   "file": "serial.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/k",
+  "directory": "e://Programmation/Kernel-Programming/k/roms/chichehunter",
   "arguments": [
    "cc",
-   "-std=gnu99",
-   "-Os",
-   "-Wall",
-   "-Wextra",
-   "-nostdinc",
-   "-fno-builtin",
-   "-ffreestanding",
-   "-m32",
-   "-fno-asynchronous-unwind-tables",
-   "-fno-common",
-   "-fno-pie",
-   "-march=i486",
-   "-fno-stack-protector",
-   "-ffunction-sections",
-   "-fdata-sections",
-   "-I/usr/lib/gcc/x86_64-linux-gnu/5/include",
-   "-MMD",
-   "-Iinclude",
-   "-I",
-   "../libs/libc/include/",
-   "-c",
-   "-o",
-   "gdt.o",
-   "gdt.c"
-  ],
-  "file": "gdt.c"
- },
- {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/k",
-  "arguments": [
-   "cc",
-   "-std=gnu99",
-   "-Os",
-   "-Wall",
-   "-Wextra",
-   "-nostdinc",
-   "-fno-builtin",
-   "-ffreestanding",
-   "-m32",
-   "-fno-asynchronous-unwind-tables",
-   "-fno-common",
-   "-fno-pie",
-   "-march=i486",
-   "-fno-stack-protector",
-   "-ffunction-sections",
-   "-fdata-sections",
-   "-I/usr/lib/gcc/x86_64-linux-gnu/5/include",
-   "-MMD",
-   "-Iinclude",
-   "-I",
-   "../libs/libc/include/",
-   "-c",
-   "-o",
-   "idt.o",
-   "idt.c"
-  ],
-  "file": "idt.c"
- },
- {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/roms/chichehunter",
-  "arguments": [
-   "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -906,9 +839,10 @@
   "file": "hunter.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/roms/chichepong",
+  "directory": "e://Programmation/Kernel-Programming/k/roms/chichepong",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -941,9 +875,10 @@
   "file": "pong.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/roms/chichevaders",
+  "directory": "e://Programmation/Kernel-Programming/k/roms/chichevaders",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -976,9 +911,10 @@
   "file": "vaders.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/roms/perrodlauncher",
+  "directory": "e://Programmation/Kernel-Programming/k/roms/perrodlauncher",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -1011,9 +947,10 @@
   "file": "perrod.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/roms/skate",
+  "directory": "e://Programmation/Kernel-Programming/k/roms/skate",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -1046,9 +983,10 @@
   "file": "skate.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/roms/skate",
+  "directory": "e://Programmation/Kernel-Programming/k/roms/skate",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -1081,9 +1019,10 @@
   "file": "gfx.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/roms/skate",
+  "directory": "e://Programmation/Kernel-Programming/k/roms/skate",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -1116,9 +1055,10 @@
   "file": "park.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/roms/skate",
+  "directory": "e://Programmation/Kernel-Programming/k/roms/skate",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -1151,9 +1091,10 @@
   "file": "skater.c"
  },
  {
-  "directory": "/mnt/e/Programmation/Kernel-Programming/k/roms/yakanoid",
+  "directory": "e://Programmation/Kernel-Programming/k/roms/yakanoid",
   "arguments": [
    "cc",
+   "-g3",
    "-std=gnu99",
    "-Os",
    "-Wall",
@@ -1184,5 +1125,101 @@
    "yakanoid.c"
   ],
   "file": "yakanoid.c"
+ },
+ {
+  "directory": "e://Programmation/Kernel-Programming/k/k",
+  "arguments": [
+   "cc",
+   "-g3",
+   "-std=gnu99",
+   "-Os",
+   "-Wall",
+   "-Wextra",
+   "-nostdinc",
+   "-fno-builtin",
+   "-ffreestanding",
+   "-m32",
+   "-fno-asynchronous-unwind-tables",
+   "-fno-common",
+   "-fno-pie",
+   "-march=i486",
+   "-fno-stack-protector",
+   "-ffunction-sections",
+   "-fdata-sections",
+   "-I/usr/lib/gcc/x86_64-linux-gnu/5/include",
+   "-MMD",
+   "-Iinclude",
+   "-I",
+   "../libs/libc/include/",
+   "-c",
+   "-o",
+   "kernel/k.o",
+   "kernel/k.c"
+  ],
+  "file": "kernel/k.c"
+ },
+ {
+  "directory": "e://Programmation/Kernel-Programming/k/k",
+  "arguments": [
+   "cc",
+   "-g3",
+   "-std=gnu99",
+   "-Os",
+   "-Wall",
+   "-Wextra",
+   "-nostdinc",
+   "-fno-builtin",
+   "-ffreestanding",
+   "-m32",
+   "-fno-asynchronous-unwind-tables",
+   "-fno-common",
+   "-fno-pie",
+   "-march=i486",
+   "-fno-stack-protector",
+   "-ffunction-sections",
+   "-fdata-sections",
+   "-I/usr/lib/gcc/x86_64-linux-gnu/5/include",
+   "-MMD",
+   "-Iinclude",
+   "-I",
+   "../libs/libc/include/",
+   "-c",
+   "-o",
+   "kernel/gdt.o",
+   "kernel/gdt.c"
+  ],
+  "file": "kernel/gdt.c"
+ },
+ {
+  "directory": "e://Programmation/Kernel-Programming/k/k",
+  "arguments": [
+   "cc",
+   "-g3",
+   "-std=gnu99",
+   "-Os",
+   "-Wall",
+   "-Wextra",
+   "-nostdinc",
+   "-fno-builtin",
+   "-ffreestanding",
+   "-m32",
+   "-fno-asynchronous-unwind-tables",
+   "-fno-common",
+   "-fno-pie",
+   "-march=i486",
+   "-fno-stack-protector",
+   "-ffunction-sections",
+   "-fdata-sections",
+   "-I/usr/lib/gcc/x86_64-linux-gnu/5/include",
+   "-MMD",
+   "-Iinclude",
+   "-I",
+   "../libs/libc/include/",
+   "-c",
+   "-o",
+   "kernel/idt.o",
+   "kernel/idt.c"
+  ],
+  "file": "kernel/idt.c"
  }
 ]

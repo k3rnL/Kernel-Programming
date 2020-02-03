@@ -25,14 +25,14 @@ include ../config.mk
 
 TARGET	= 	k
 OBJS	= 	crt0.o \
-		k.o \
+		kernel/k.o \
 		libvga.o \
 		list.o \
 		memory.o \
 		serial.o \
-		gdt.o \
-		idt.o \
-		idt_load.o
+		kernel/gdt.o \
+		kernel/idt.o \
+		kernel/idt_load.o
 
 
 DEPS = $(OBJS:.o=.d)
