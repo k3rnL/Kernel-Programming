@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "gdt.h"
+#include "../include/gdt.h"
 
 
 static struct gdtdesc gdt[3] = {0};

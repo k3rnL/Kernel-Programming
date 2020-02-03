@@ -3,7 +3,7 @@
  * Wayland project; except that wl_ prefix has been removed.
  */
 
-#include "list.h"
+#include "include/list.h"
 
 void list_init(struct list *list)
 {

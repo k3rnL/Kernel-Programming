@@ -30,9 +30,11 @@ OBJS	= 	crt0.o \
 		list.o \
 		memory.o \
 		serial.o \
-		gdt.o \
-		idt.o \
-		idt_load.o
+		kernel/gdt.o \
+		kernel/idt.o \
+		kernel/isr.o \
+		kernel/interruption.o \
+		kernel/descriptor_tables.o \
 
 
 DEPS = $(OBJS:.o=.d)
@@ -40,7 +42,7 @@ DEPS = $(OBJS:.o=.d)
 all: $(TARGET)
 
 $(TARGET): CPPFLAGS += -MMD -Iinclude -I ../libs/libc/include/
-$(TARGET): CFLAGS += $(K_EXTRA_CFLAGS)
+$(TARGET): CFLAGS += $(K_EXTRA_CFLAGS) -Iinclude
 $(TARGET): LDFLAGS += -Wl,-Tk.lds
 $(TARGET): LDLIBS = -L../libs/libc -lc
 $(TARGET): $(OBJS)

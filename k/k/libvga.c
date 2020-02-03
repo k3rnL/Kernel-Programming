@@ -23,8 +23,8 @@
 */
 #include <k/compiler.h>
 
-#include "libvga.h"
-#include "io.h"
+#include "include/libvga.h"
+#include "include/io.h"
 
 /*
 ** Use to save the VGA plane 2, which contains the text font,
