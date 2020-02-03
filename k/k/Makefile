@@ -32,7 +32,8 @@ OBJS	= 	crt0.o \
 		serial.o \
 		kernel/gdt.o \
 		kernel/idt.o \
-		kernel/idt_load.o \
+		kernel/isr.o \
+		kernel/interruption.o \
 		kernel/descriptor_tables.o \
 
 
