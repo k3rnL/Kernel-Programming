@@ -44,11 +44,11 @@ void k_main(unsigned long magic, multiboot_info_t *info)
 
     printf("kernel : loading keyboard...\n");
     init_keyboard();
-    printf("kernel : loading keyboard...\n");
+    printf("kernel : keyboard loaded...\n");
 
     printf("kernel : init timer...\n");
     init_timer(100);
-    printf("kernel : init timer...\n");
+    printf("kernel : timer initialized...\n");
 
     __asm__("sti");
 
