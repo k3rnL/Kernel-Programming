@@ -28,6 +28,7 @@
 #include "multiboot.h"
 #include "descriptor_tables.h"
 #include "keyboard.h"
+#include "timer.h"
 
 void k_main(unsigned long magic, multiboot_info_t *info)
 {
@@ -41,11 +42,16 @@ void k_main(unsigned long magic, multiboot_info_t *info)
 
     init_descriptor_tables();
 
+    printf("kernel : loading keyboard...\n");
     init_keyboard();
+    printf("kernel : loading keyboard...\n");
+
+    printf("kernel : init timer...\n");
+    init_timer(100);
+    printf("kernel : init timer...\n");
 
     __asm__("sti");
 
-//    while(1);
 }
 
 

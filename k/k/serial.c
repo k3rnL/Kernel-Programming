@@ -34,8 +34,8 @@ int write(const char *buf, size_t count)
     {
       outb(THR, buf[i]);
     }
-  outb(THR, '\r');
-  outb(THR, '\n');
+//  outb(THR, '\r');
+//  outb(THR, '\n');
   return 1;
 }
 
