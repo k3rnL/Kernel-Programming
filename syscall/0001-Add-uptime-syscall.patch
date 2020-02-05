@@ -1,0 +1,95 @@
+From 944f4faae6e24abb49ff12a4e50004df00d66f31 Mon Sep 17 00:00:00 2001
+From: Erwan Daniel <erwan.daniel@epitech.eu>
+Date: Wed, 5 Feb 2020 20:28:00 +0100
+Subject: [KERNEL] bacq daniele - syscall
+Signed-off-by: Erwan Daniel <erwan.daniel@epitech.eu>
+---
+ arch/x86/entry/syscalls/syscall_32.tbl |  1 +
+ arch/x86/entry/syscalls/syscall_64.tbl |  1 +
+ include/linux/syscalls.h               |  1 +
+ include/uapi/asm-generic/unistd.h      |  3 +++
+ kernel/time/time.c                     | 13 +++++++++++++
+ 5 files changed, 19 insertions(+)
+
+diff --git a/arch/x86/entry/syscalls/syscall_32.tbl b/arch/x86/entry/syscalls/syscall_32.tbl
+index c17cb77..62bdc85 100644
+--- a/arch/x86/entry/syscalls/syscall_32.tbl
++++ b/arch/x86/entry/syscalls/syscall_32.tbl
+@@ -442,3 +442,4 @@
+ 435	i386	clone3			sys_clone3			__ia32_sys_clone3
+ 437	i386	openat2			sys_openat2			__ia32_sys_openat2
+ 438	i386	pidfd_getfd		sys_pidfd_getfd			__ia32_sys_pidfd_getfd
++436	i386	uptime			sys_uptime          __ia32_sys_uptime
+\ No newline at end of file
+diff --git a/arch/x86/entry/syscalls/syscall_64.tbl b/arch/x86/entry/syscalls/syscall_64.tbl
+index 44d510b..75bbef6 100644
+--- a/arch/x86/entry/syscalls/syscall_64.tbl
++++ b/arch/x86/entry/syscalls/syscall_64.tbl
+@@ -357,6 +357,7 @@
+ 433	common	fspick			__x64_sys_fspick
+ 434	common	pidfd_open		__x64_sys_pidfd_open
+ 435	common	clone3			__x64_sys_clone3/ptregs
++436	common	uptime			__x64_sys_uptime
+ 437	common	openat2			__x64_sys_openat2
+ 438	common	pidfd_getfd		__x64_sys_pidfd_getfd
+ 
+diff --git a/include/linux/syscalls.h b/include/linux/syscalls.h
+index 1815065..39692cd 100644
+--- a/include/linux/syscalls.h
++++ b/include/linux/syscalls.h
+@@ -740,6 +740,7 @@ asmlinkage long sys_settimeofday(struct __kernel_old_timeval __user *tv,
+ 				struct timezone __user *tz);
+ asmlinkage long sys_adjtimex(struct __kernel_timex __user *txc_p);
+ asmlinkage long sys_adjtimex_time32(struct old_timex32 __user *txc_p);
++asmlinkage long sys_uptime(time_t __user *t);
+ 
+ /* kernel/timer.c */
+ asmlinkage long sys_getpid(void);
+diff --git a/include/uapi/asm-generic/unistd.h b/include/uapi/asm-generic/unistd.h
+index 3a3201e..1ee67c2 100644
+--- a/include/uapi/asm-generic/unistd.h
++++ b/include/uapi/asm-generic/unistd.h
+@@ -851,6 +851,9 @@ __SYSCALL(__NR_pidfd_open, sys_pidfd_open)
+ __SYSCALL(__NR_clone3, sys_clone3)
+ #endif
+ 
++#define __NR_uptime 436
++__SYSCALL(__NR_uptime, sys_uptime)
++
+ #define __NR_openat2 437
+ __SYSCALL(__NR_openat2, sys_openat2)
+ #define __NR_pidfd_getfd 438
+diff --git a/kernel/time/time.c b/kernel/time/time.c
+index cdd7386..d75dcc0 100644
+--- a/kernel/time/time.c
++++ b/kernel/time/time.c
+@@ -35,6 +35,7 @@
+ #include <linux/fs.h>
+ #include <linux/math64.h>
+ #include <linux/ptrace.h>
++#include <linux/ktime.h>
+ 
+ #include <linux/uaccess.h>
+ #include <linux/compat.h>
+@@ -137,6 +138,18 @@ SYSCALL_DEFINE1(stime32, old_time32_t __user *, tptr)
+ #endif /* __ARCH_WANT_SYS_TIME32 */
+ #endif
+ 
++SYSCALL_DEFINE1(uptime, time_t __user *, t)
++{
++	time_t uptime;
++
++	uptime = ktime_divns(ktime_get_coarse_boottime(), NSEC_PER_SEC);
++
++	if (t != NULL)
++		*t = uptime;
++
++	return uptime;
++}
++
+ SYSCALL_DEFINE2(gettimeofday, struct __kernel_old_timeval __user *, tv,
+ 		struct timezone __user *, tz)
+ {
+-- 
+2.7.4
+
